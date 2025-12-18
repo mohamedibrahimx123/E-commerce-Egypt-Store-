@@ -119,7 +119,7 @@ export default function Home() {
                 {categories.map((category) => (
                   <a
                     key={category._id}
-                    href={`#/category/${category._id}`}
+                    href={`/categories/`}
                     className="bg-white rounded-xl shadow-md hover:shadow-xl overflow-hidden"
                   >
                     <img
@@ -145,7 +145,7 @@ export default function Home() {
                 {brands.map((brand) => (
                   <a
                     key={brand._id}
-                    href={`#/brand/${brand._id}`}
+                    href={`/brands/`}
                     className="bg-white rounded-xl shadow-md p-6 text-center"
                   >
                     <img
@@ -193,7 +193,7 @@ export default function Home() {
                           {product.price} EGP
                         </span>
                         <a
-                          href={`#/product/${product._id}`}
+                          href={`/products/`}
                           className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm"
                         >
                           View
