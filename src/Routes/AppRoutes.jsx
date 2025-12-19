@@ -12,6 +12,7 @@ import Cart from "../pages/Cart";
 import Wishlist from "../pages/Wishlist";
 import Orders from "../pages/Orders";
 import Checkout from "../pages/Checkout";
+import PrivateRoute from "../components/PrivateRoute";
 export default function AppRoutes() {
   return (
     <Routes>
@@ -28,11 +29,25 @@ export default function AppRoutes() {
       <Route path="/brands" element={<Brands />} />
       <Route path="/categories" element={<Categories />} />
 
-      <Route path="/cart" element={<Cart />} />
+      <Route
+        path="/cart"
+        element={
+          <PrivateRoute>
+            <Cart />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/orders"
+        element={
+          <PrivateRoute>
+            <Orders />
+          </PrivateRoute>
+        }
+      />
       <Route path="/wishlist" element={<Wishlist />} />
-      <Route path="/orders" element={<Orders />} />
       <Route path="/checkout" element={<Checkout />} />
     </Routes>
   );
 }
-

@@ -27,6 +27,9 @@ export default function Navbar() {
             <a href="/categories" className="px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors duration-200">
               Categories
             </a>
+            <a href="/login" className="px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors duration-200">
+              Login
+            </a>
           </div>
 
           {/* Icons */}
